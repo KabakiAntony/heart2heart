@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <title>heart2heart</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">heart2heart</div>
+    </div>
+    
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <div class="content">
+        <h1>Spread the festive cheer &#127881; &#x1F389;</h1>
+        <h2>Let us send short personalized messages, to your friends around the world</h2>
+        <h3>Have the recipients receive them in any language you choose</h3>
+        <p>Choose how you want to pass your message</p>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="messageType" id="id_voice_radio"> Voice Message
+            </label>
+            <label>
+                <input type="radio" name="messageType" id="id_email_radio"> Email Message
+            </label>
+        </div>
+        <div class="choice">
+            <div class="voice-choice">
+                {% include 'components/voice.html' %}
+            </div>
+            <div class="email-choice">
+                {% include 'components/email.html' %}
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/main.js' %}" type="module"></script>
+    {% include 'components/footer.html' %}
+</body>
+
+</html>

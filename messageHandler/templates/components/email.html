@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="form-container" id="id_email_form">
+    <h4 class="form_header">Create email message</h4>
+    <form action="/email-message/" class="message-form" id="email_message" method="POST">
+        {% csrf_token %}
+        <label for="sender_name">Your name</label>
+        <input type="text" name="sender_name" id="id_sender_name" required>
+        <label for="recipient_name">Recipient's name</label>
+        <input type="text" name="recipient_name" id="id_recipient_name" required>
+        <label for="recipient_email">Recipients email</label>
+        <input type="email" name="recipient_email" id="id_recipient_email" required>
+        <label for="recipient_lang">Recipient's language</label>
+        <select name="language" required>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+        </select>
+        <label for="message">Your special message</label>
+        <textarea name="message" id="id_message" cols="58" rows="4" maxlength="160"></textarea>
+        <button type="submit" class="send_btn">Send email</button>
+    </form>
+</div>
+

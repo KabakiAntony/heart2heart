@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: 'Playpen Sans', cursive;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+
+.navbar {
+    background: linear-gradient(to right, #6C63FF, #A45FFF);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.navbar-logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+h2, h3{
+    padding: 10px 0;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.radio-group label {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.choice{
+    margin-top: 20px;
+}
+
+.form-container{
+    max-width: 100%;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px 3px #A45FFF;
+    overflow: hidden;
+    margin: 10px auto;
+    display: none;
+}
+
+.form_header {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #6C63FF, #A45FFF);
+    color: #fff;
+}
+
+.message-form{
+    padding:20px;
+}
+
+.message-form>input {
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #6C63FF;
+    font-family: inherit;
+}
+
+.message-form>label{
+    text-align: left;
+    width: 95%;
+    display: block;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+select{
+    padding:8px;
+    display: block;
+    width: 90%;
+    margin:0 auto;
+}
+
+textarea{
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #6C63FF;
+    padding: 8px;
+    width: 90%;
+    font-family: inherit;
+}
+
+.send_btn {
+    margin-top: 20px;
+    width: 60%;
+    padding: 8px;
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, #6C63FF, #A45FFF);
+    border: 1px solid #A45FFF;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.send_btn:hover{
+    background:linear-gradient(to left, #6C63FF, #A45FFF);
+    color: #000000;
+}
+
+#id_email_form.show,
+#id_voice_form.show {
+    display: block;
+}
+
+.messages .success {
+    background: linear-gradient(to right, #5eae5b,#043b02) ;
+    border: 1px solid #043b02;
+    list-style: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    color: #fff;
+}
+
+footer {
+    background: linear-gradient(to left,#6C63FF, #A45FFF);
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding:5px;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+
+}
+
+footer a:hover {
+    color: #000000;
+}
