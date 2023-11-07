@@ -9,11 +9,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 
 
-account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
-auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
-client = Client(account_sid, auth_token)
-
-
 def home(request):
     """ show the home page with the form prompts"""
     return render(request, 'messageHandler/home.html')
@@ -46,6 +41,11 @@ def voice_message(request):
         result = translate_text(language, constructed_message)
 
         translated_message = result.get('translatedText')
+
+        client = Client(
+            os.environ.get('TWILIO_ACCOUNT_SID'),
+            os.environ.get('TWILIO_AUTH_TOKEN')
+        )
 
         client.calls.create(
             twiml=f"""
