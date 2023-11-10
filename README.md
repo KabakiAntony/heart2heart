@@ -2,7 +2,8 @@
 
 ## what is heart2heart
 
-    heart2heart is messaging service where you send short messages as voice and email, the beauty of it is you get to choose the language the recipient will recipient will receive the message in, breaking down barriers of communication.
+heart2heart is messaging service where you send short messages as voice or email,
+the beauty of it is you get to choose the language the recipient will recipient will receive the message in, breaking down barriers of communication.
 
 The service utilizes
 
@@ -13,7 +14,7 @@ The service utilizes
 You will need to signup to the various services in order to get the respective API keys.
 
 ## Setup and installation
-[get it here](https://www.postgresql.org/download/)
+
 
    Clone this repo and **cd** into it only then you can start working following the steps below.
 
